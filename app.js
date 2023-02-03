@@ -6,7 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./controllers/index');
 const usersRouter = require('./controllers/users');
-//reference to our new custom controller
+// reference our new custom controller
 const employers = require('./controllers/employers');
 
 const app = express();
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//map all requests at /employers to our own employers.js controller
+// map all requests at /employers to our own employers.js controller
 app.use('/employers', employers);
 
 // catch 404 and forward to error handler
